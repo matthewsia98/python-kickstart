@@ -1,0 +1,36 @@
+[build-system]
+build-backend = "setuptools.build_meta"
+requires = [
+    "setuptools",
+    "setuptools-scm"
+]
+
+[project]
+name = "package_name"
+version = "0.0.1"
+description = "A short description of the project."
+readme = { file = "README.md", content-type = "text/markdown" }
+license = { file = "LICENSE" }
+authors = [
+    { name = "Matthew Sia", email = "matthewsia98@gmail.com" }
+]
+classifiers = [
+  "Programming Language :: Python"
+]
+
+[project.urls]
+Repository = "https://github.com/matthewsia98/"
+
+[tool.pytest.ini_options]
+addopts = "-rA --capture=no"
+testpaths = [
+    "tests"
+]
+
+[tool.isort]
+profile = "black"
+skip_gitignore = true
+
+[tool.mypy]
+disallow_untyped_defs = true
+check_untyped_defs = true
